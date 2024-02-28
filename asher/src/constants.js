@@ -1,3 +1,3 @@
 export const textStrings = {
-    BOOT_MESSAGE: "Hi! Chloe just started me up! I'm not quite ready yet though!",
+    BOOT_MESSAGE: "I just restarted! Either the server hiccuped or I have new powers now :)",
 };
