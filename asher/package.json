@@ -2,6 +2,7 @@
   "name": "asher-discord-bot",
   "version": "0.0.0",
   "description": "best friends bot",
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "serve": "node src/index.js",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/walcutt/asher/issues"
   },
-  "homepage": "https://github.com/walcutt/asher#readme"
+  "homepage": "https://github.com/walcutt/asher#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
 }
