@@ -5,5 +5,6 @@ export function shame(deletedMessage) {
 
     const newMessage = `${user} posted the following at <t:${timestamp}:F>:\n${messageContent}`;
     
-    deletedMessage.reply(newMessage).then((m) => m.pin());
+    const channel = deletedMessage.channel;
+    channel.send(newMessage).then((m) => m.pin());
 }
