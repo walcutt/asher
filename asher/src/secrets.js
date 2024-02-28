@@ -1,11 +1,13 @@
 import fs from 'fs';
 
 export const secretKeys = {
-    BOT_KEY: 'botkey'
+    BOT_KEY: 'botkey',
+    DEFAULT_CHANNEL: 'default-channel',
 };
 
 const secretManifest = [
     secretKeys.BOT_KEY,
+    secretKeys.DEFAULT_CHANNEL,
 ];
 
 let secrets = {};

@@ -1,6 +1,7 @@
 import { Events } from "discord.js";
 // Import routines.
 import { startupHeartbeat } from "./client-ready/startup-heartbeat/startupHeartbeat.js";
+import { startupSendMessage } from "./client-ready/startup-send-message/startupSendMessage.js";
 
 /*
  *  All bot actions are "routines" that fire off of some trigger.
@@ -17,6 +18,7 @@ export const routineManifest = [
         event: Events.ClientReady,
         routines: [
             startupHeartbeat,
+            startupSendMessage,
         ],
     },
 ];

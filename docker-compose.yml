@@ -10,8 +10,11 @@ services:
     command: bash -c "cd /asher && npm i && npm run serve"
     secrets:
       - botkey
+      - default-channel
 
 
 secrets:
   botkey:
     file: ./botkey.txt
+  default-channel:
+    file: ./defaultchannel.txt
