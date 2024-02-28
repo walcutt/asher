@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  asher:
+    image: node:latest
+    restart: unless-stopped
+    init: true
+    volumes:
+      - ./asher:/asher
+    command: bash -c "cd /asher && npm i && npm run serve"
+    secrets:
+      - botkey
+
+
+secrets:
+  botkey:
+    file: ./botkey.txt
