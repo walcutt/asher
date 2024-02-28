@@ -14,7 +14,7 @@ let secrets = {};
 
 secretManifest.forEach(
     (key) => {
-        secrets[key] = fs.readFileSync(`/run/secrets/${key}`, { encoding: "utf-8" });
+        secrets[key] = fs.readFileSync(`/run/secrets/${key}`, { encoding: "utf-8" }).trim();
     }
 );
 
