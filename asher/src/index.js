@@ -15,9 +15,9 @@ const client = new Client({ intents: [
 
 routineManifest.forEach(
     (eventClass) => {
-        client.on(eventClass.event, (event) => {
+        client.on(eventClass.event, (...eventArgs) => {
             eventClass.routines.forEach(
-                (routine) => routine(event)
+                (routine) => routine(...eventArgs)
             )
         });
     }
