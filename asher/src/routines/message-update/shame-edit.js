@@ -10,7 +10,9 @@ export function shameEdit(oldMessage, newMessage) {
 
     const didTextContentChange = oldContent !== newContent;
 
-    console.log(`Messages do${didTextContentChange ? " not" : ""} match.`);
+    if(!didTextContentChange) {
+        return;
+    }
 
-    // newMessage.reply(messageToSend).then((m) => m.pin());
+    newMessage.reply(messageToSend).then((m) => m.pin());
 }
