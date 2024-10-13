@@ -4,22 +4,13 @@ export function shameEdit(oldMessage, newMessage) {
 
     const user = oldMessage.author.displayName;
 
-    const self = oldMessage.client.user;
-
     const timestamp = newMessage.createdTimestamp;
 
     const messageToSend = `${user} edited this message at <t:${timestamp}:F>. It used to say:\n${oldContent}`;
 
-    console.log("Received message update event!");
-    console.log(oldMessage);
-    console.log("---------------");
-    console.log(newMessage);
-    console.log("---------------");
-    console.log(self);
+    const didTextContentChange = oldContent !== newContent;
 
-    if(oldMessage.author.id == self.id || newMessage.author.id === self.id) {
-        return;
-    }
+    console.log(`Messages do${didTextContentChange ? " not" : ""} match.`);
 
     // newMessage.reply(messageToSend).then((m) => m.pin());
 }
