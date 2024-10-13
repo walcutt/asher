@@ -3,6 +3,7 @@ import { Events } from "discord.js";
 import { startupHeartbeat } from "./client-ready/startup-heartbeat/startupHeartbeat.js";
 import { startupSendMessage } from "./client-ready/startup-send-message/startupSendMessage.js";
 import { shame } from "./message-delete/shame/shame.js";
+import { shameEdit } from "./message-update/shame-edit.js";
 
 /*
  *  All bot actions are "routines" that fire off of some trigger.
@@ -19,7 +20,6 @@ export const routineManifest = [
         event: Events.ClientReady,
         routines: [
             startupHeartbeat,
-            startupSendMessage,
         ],
     },
     {
@@ -28,4 +28,10 @@ export const routineManifest = [
             shame,
         ],
     },
+    {
+        event: Events.MessageUpdate,
+        routines: [
+            shameEdit,
+        ],
+    }
 ];
