@@ -17,7 +17,7 @@ export function shameEdit(oldMessage, newMessage) {
     console.log("---------------");
     console.log(self);
 
-    if(oldMessage.user.id == self.id || newMessage.user.id === self.id) {
+    if(oldMessage.author.id == self.id || newMessage.author.id === self.id) {
         return;
     }
 
