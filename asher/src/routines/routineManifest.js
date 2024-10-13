@@ -4,6 +4,8 @@ import { startupHeartbeat } from "./client-ready/startup-heartbeat/startupHeartb
 import { startupSendMessage } from "./client-ready/startup-send-message/startupSendMessage.js";
 import { shame } from "./message-delete/shame/shame.js";
 import { shameEdit } from "./message-update/shame-edit.js";
+import { deathPenalty } from "./message-create/death-penalty/death-penalty.js";
+
 
 /*
  *  All bot actions are "routines" that fire off of some trigger.
@@ -33,5 +35,11 @@ export const routineManifest = [
         routines: [
             shameEdit,
         ],
-    }
+    },
+    {
+        event: Events.MessageCreate,
+        routines: [
+            deathPenalty,
+        ],
+    },
 ];
