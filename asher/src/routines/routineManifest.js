@@ -20,7 +20,6 @@ export const routineManifest = [
         event: Events.ClientReady,
         routines: [
             startupHeartbeat,
-            startupSendMessage,
         ],
     },
     {
